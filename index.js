@@ -39,8 +39,8 @@ for(var i=0;i<document.querySelectorAll(".drum").length;i++){
                 break;
     
             case "l":
-                var kick-bass = new Audio("sounds/kick-bass.mp3");
-                kick-bass.play();
+                var kick= new Audio("sounds/kick-bass.mp3");
+                kick.play();
                 break;
             default:console.log(buttoninnerhtml);
         }
