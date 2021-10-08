@@ -7,13 +7,14 @@ for(var i=0;i<document.querySelectorAll(".drum").length;i++){
         var buttonInnerHTML= this.innerHTML;
 
         makeSound(buttonInnerHTML);
-
+        buttonAnimation(buttonInnerHTML);
 });
 
 } 
 
 document.addEventListener("keydown",function(event){
     makeSound(event.key);
+    buttonAnimation(event.key);
 })
 
 
@@ -31,7 +32,7 @@ document.addEventListener("keydown",function(event){
                 break;
         
         
-            case "s":red
+            case "s":
                 var tom3 = new Audio("sounds/tom-3.mp3");
                 tom3.play();
                 break;
@@ -59,3 +60,15 @@ document.addEventListener("keydown",function(event){
             default:console.log(key);
         }
         }
+
+
+
+function buttonAnimation(currentkey){
+    var buttonPressed= document.querySelector("."+ currentkey);
+    buttonPressed.classList.add("pressed");
+    setTimeout(function(){
+        buttonPressed.classList.remove("pressed");
+    }, 100);
+
+
+}        
